@@ -1,0 +1,35 @@
+/* layout.scss */
+
+// variables **********************************************************************************************************
+
+// mixins *************************************************************************************************************
+
+// styles *************************************************************************************************************
+
+html {
+  height: 100%;
+}
+
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+.g-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.g-main {
+  margin-bottom: auto;
+}

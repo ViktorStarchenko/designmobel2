@@ -1,0 +1,100 @@
+/* g-footer.scss */
+
+// variables **********************************************************************************************************
+
+// mixins *************************************************************************************************************
+
+// styles *************************************************************************************************************
+
+.g-footer {
+  background-color: #000;
+  padding: 60px 0;
+
+  @media (min-width: $screen-md-min) {
+    min-height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+
+  .f-wrap {
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+
+  .f-logo {
+    @media (min-width: $screen-md-min) {
+      flex: 0 0 252px;
+      max-width: 252px;
+      margin-right: 50px;
+    }
+    @media (max-width: $screen-md-max) {
+      flex: 0 0 212px;
+      max-width: 212px;
+    }
+    @media (max-width: $screen-sm-max) {
+      flex: none;
+      margin: 0 auto 40px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+
+      @media (max-width: $screen-sm-max) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+  .f-menu {
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: -25px;
+      margin-right: -25px;
+    }
+
+
+    .menu-item {
+      @include ff-medium;
+      color: #fff;
+      letter-spacing: 2.6px;
+      font-size: 12px;
+      line-height: 16px;
+
+      @media (min-width: $screen-md-min) {
+        margin: 10px 25px;
+      }
+      @media (max-width: $screen-sm-max) {
+        text-align: center;
+      }
+
+      + .menu-item {
+        @media (max-width: $screen-sm-max) {
+          margin-top: 20px;
+        }
+      }
+
+      > a {
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          color: inherit;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
