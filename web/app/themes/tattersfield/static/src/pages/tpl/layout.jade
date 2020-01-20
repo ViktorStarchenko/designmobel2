@@ -1,0 +1,25 @@
+block vars
+	- var bodyClass = ''
+	- var pageTitle = 'Layout'
+	- var DIR = ''
+
+include ../../components/mixins/index
+include ../../components/elements/index
+
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no')
+		meta(name='format-detection', content='telephone=no')
+		title #{pageTitle}
+		link(rel='icon', type='image/png', href='#{DIR}favicon.png')
+		link(rel='apple-touch-icon-precomposed', href='#{DIR}apple-touch-icon.png')
+		link(rel='stylesheet', href='#{DIR}css/app.min.css')
+	body(class="#{bodyClass}")
+		.g-wrap
+			main.g-main
+				block content
+			block footer
+				include ../../components/footer/index

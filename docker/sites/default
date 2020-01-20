@@ -1,0 +1,41 @@
+server {
+    listen 80;
+	server_name     designmobel.localhost;
+
+	root        /var/www/web;
+	index       index.php;
+
+	client_max_body_size 100M;
+	fastcgi_read_timeout 1800;
+
+	location / {
+                # try_files $uri $uri/ =404;
+                try_files $uri $uri/ /index.php?q=$uri&$args;
+        }
+
+        error_page 404 /404.html;
+
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+                root /usr/share/nginx/html;
+        }
+
+        location ~ \.php$ {
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            try_files     $uri =404;
+
+            include       fastcgi_params;
+
+            fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+            fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+
+            fastcgi_index index.php;
+            fastcgi_pass  phpfpm:9000;
+        }
+
+        location /app/html/public {
+               autoindex on;
+        }
+
+}
+

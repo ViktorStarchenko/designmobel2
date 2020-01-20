@@ -1,0 +1,181 @@
+// Colors
+//
+
+$color-border-default:                   rgba(#979797, 0.4);
+
+// Body
+
+$body-bg:                                #fff;
+$body-color:                             #1C1B1B;
+
+
+// Links
+
+$link-color:                             $body-color;
+$link-decoration:                        underline;
+$link-hover-color:                       $body-color;
+$link-hover-decoration:                  underline;
+
+
+// Grid
+//
+
+// Grid columns
+
+$grid-columns:                           12;
+$grid-gutter-width:                      40px;
+
+// Grid breakpoints
+
+$screen-xs:                              540px;
+$screen-sm:                              768px;
+$screen-md:                              1024px;
+$screen-lg:                              1280px;
+$screen-xl:                              1440px;
+
+$screen-mob-max:                         $screen-xs - 1;
+$screen-xs-min:                          $screen-xs;
+$screen-xs-max:                          $screen-sm - 1;
+$screen-sm-min:                          $screen-sm;
+$screen-sm-max:                          $screen-md - 1;
+$screen-md-min:                          $screen-md;
+$screen-md-max:                          $screen-lg - 1;
+$screen-lg-min:                          $screen-lg;
+$screen-lg-max:                          $screen-xl - 1;
+$screen-xl-min:                          $screen-xl;
+
+$grid-breakpoints: (
+  xs:                                    $screen-xs,
+  sm:                                    $screen-sm,
+  md:                                    $screen-md,
+  lg:                                    $screen-lg,
+  xl:                                    $screen-xl
+);
+
+
+// Grid containers
+
+$container-max-widths: (
+  xs:                                    540px,
+  sm:                                    740px,
+  md:                                    940px,
+  lg:                                    1140px,
+  xl:                                    1240px
+);
+
+
+// Page
+//
+
+
+// Typography
+//
+
+$font-book:                              AvenirLTPro-Book;
+$font-medium:                            AvenirLTPro-Medium;
+
+$font-family-base:                       $font-book, $font-family-sans-serif;
+$font-size-root:                         16px;
+$font-size-base:                         14px;
+
+$font-weight-light:                      300;
+$font-weight-normal:                     400;
+$font-weight-medium:                     500;
+$font-weight-bold:                       700;
+
+$font-weight-base:                       $font-weight-normal;
+$line-height-base:                       26px;
+$letter-spacing-base:                    0.4px;
+
+$h1-font-size:                           30px;
+$h1-font-size-small:                     28px;
+$h2-font-size:                           25px;
+$h2-font-size-small:                     23px;
+$h3-font-size:                           18px;
+$h3-font-size-small:                     16px;
+$h4-font-size:                           16px;
+$h4-font-size-small:                     14px;
+$h5-font-size:                           14px;
+$h6-font-size:                           12px;
+
+$h1-line-height:                         32px;
+$h1-line-height-small:                   30px;
+$h2-line-height:                         28px;
+$h2-line-height-small:                   26px;
+$h3-line-height:                         24px;
+$h3-line-height-small:                   22px;
+$h4-line-height:                         22px;
+$h4-line-height-small:                   20px;
+$h5-line-height:                         20px;
+$h6-line-height:                         18px;
+
+$headings-font-size:                     20px;
+$headings-font-size-small:               18px;
+$headings-line-height:                   26px;
+$headings-line-height-small:             24px;
+$headings-margin-bottom:                 20px;
+$headings-font-family:                   $font-book, $font-family-sans-serif;
+$headings-font-weight:                   $font-weight-normal;
+$headings-transform:                     uppercase;
+$headings-color:                         #000;
+$headings-letter-spacing:                4.4px;
+$headings-letter-spacing-small:          4px;
+
+$paragraph-margin-bottom:                24px;
+
+$lead-font-size:                         18px;
+$lead-line-height:                       26px;
+
+$small-font-size:                        14px;
+$small-line-height:                      18px;
+
+$hr-margin-y:                            40px;
+$hr-border-color:                        $color-border-default;
+$hr-border-width:                        1px;
+
+
+// Buttons
+//
+
+$btn-height:                             58px;
+$btn-default-bg:                         #000;
+$btn-default-bg-hover:                   #222;
+$btn-default-color:                      #fff;
+$btn-font-family:                        $font-medium, $font-family-sans-serif;
+$btn-font-size:                          15px;
+$btn-line-height:                        20px;
+$btn-letter-spacing:                     3px;
+$btn-border-width:                       1px;
+$btn-border-radius:                      0;
+$btn-text-transform:                     uppercase;
+$btn-font-weight:                        $font-weight-normal;
+
+$btn-padding-top-different:              2px;
+$btn-padding-bottom-different:           0;
+$btn-padding-top:                        ceil(($btn-height - $btn-line-height - ($btn-border-width * 2)) / 2) + $btn-padding-top-different - $btn-padding-bottom-different;
+$btn-padding-bottom:                     floor(($btn-height - $btn-line-height - ($btn-border-width * 2)) / 2) - $btn-padding-top-different + $btn-padding-bottom-different;
+$btn-padding-x:                          20px;
+
+
+// Forms
+//
+
+$input-height:                           40px;
+$input-default-bg:                       transparent;
+$input-default-color:                    $body-color;
+$input-border-color:                     rgba($body-color, 0.2);
+$input-placeholder-color:                rgba($body-color, 0.4);
+$input-font-size:                        $font-size-base;
+$input-line-height:                      $line-height-base;
+$input-border-width:                     1px;
+$input-border-radius:                    0;
+$input-text-transform:                   none;
+$input-font-family:                      $font-book, $font-family-sans-serif;
+$input-font-weight:                      $font-weight-normal;
+$input-letter-spacing:                   $letter-spacing-base;
+
+$input-padding-top-different:            0;
+$input-padding-bottom-different:         0;
+$input-padding-top:                      ceil(($input-height - $input-line-height - ($input-border-width * 2)) / 2) + $input-padding-top-different - $input-padding-bottom-different;
+$input-padding-bottom:                   floor(($input-height - $input-line-height - ($input-border-width * 2)) / 2) - $input-padding-top-different + $input-padding-bottom-different;
+$input-padding-x:                        15px;

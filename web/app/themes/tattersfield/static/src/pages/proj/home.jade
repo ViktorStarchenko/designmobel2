@@ -1,0 +1,10 @@
+extends ../tpl/layout
+
+block vars
+	- var bodyClass = ''
+	- var pageTitle = 'Home'
+	- var DIR = ''
+block content
+	include ../../components/pages/home/section-hero/index
+	include ../../components/pages/home/section-about/index
+	include ../../components/pages/home/section-retailer/index
